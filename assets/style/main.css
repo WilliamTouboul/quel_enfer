@@ -26,6 +26,10 @@ a {
   font-weight: 500;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 html,
 body {
   overflow-x: hidden;
@@ -59,6 +63,7 @@ body {
   position: fixed;
   top: 50px;
   right: 50px;
+  cursor: pointer;
   z-index: 9999;
 }
 
@@ -195,6 +200,7 @@ body {
   font-size: 128px;
 }
 .header .nav_arrow {
+  display: none;
   position: absolute;
   bottom: -20px;
   left: 50%;
@@ -317,13 +323,16 @@ body {
 }
 .works .right img {
   background-color: grey;
-  width: 25vw;
-  height: 0;
+  width: 33vw;
+  height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
 .works .right img:hover {
   filter: url(#turbulence);
+}
+.works .right p {
+  opacity: 0;
 }
 .works .right .line_1 {
   width: 25vw;
@@ -347,4 +356,57 @@ body {
   font-size: 16px;
   font-family: "montreal medium";
   color: #e0f8d0;
+}
+
+/* --------------------------------- button --------------------------------- */
+.button_container {
+  position: relative;
+}
+
+.button {
+  position: absolute;
+  bottom: 0px;
+  left: 50%;
+  transform: translateX(-50%) rotate(45deg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 120px;
+  height: 120px;
+  border: solid 1px #88c070;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.button .button-text {
+  position: absolute;
+  transform: rotate(-45deg);
+}
+
+.button .foreground-text {
+  opacity: 0;
+  z-index: 1;
+  color: #f7f7f7;
+}
+
+.button::after {
+  content: "";
+  position: relative;
+  z-index: 0;
+  width: 0;
+  height: 0;
+  background-color: #88c070;
+  transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@media (hover: hover) {
+  .button:hover {
+    border-color: transparent;
+  }
+  .button:hover::after {
+    width: 100%;
+    height: 100%;
+  }
+  .button:hover .button-text.foreground-text {
+    opacity: 1;
+  }
 }/*# sourceMappingURL=main.css.map */

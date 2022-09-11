@@ -45,7 +45,23 @@
             <div class="bottom">
                 <h2>bienvenue</h2>
             </div>
-            <img class="nav_arrow" src="/assets/icons/down_arrow_header.svg" alt="">
+            <a href="#works">
+                <img class="nav_arrow" src="/assets/icons/down_arrow_header.svg" alt="">
+            </a>
+
+
+            <div class="button_container">
+                <a href="#works" class="button" cursor-class="overlay">
+                    <span class="button-text">
+                        <img src="assets/icons/green_arrow.svg" alt="">
+                    </span>
+                    <span class="button-text foreground-text">
+                        <img src="assets/icons/bg_arrow.svg" alt="">
+                    </span>
+                </a>
+            </div>
+
+
         </div>
 
         <div class="part_1" id="snap_1">
@@ -60,36 +76,36 @@
             </section>
         </div>
 
-        <section class="works">
+        <section class="works" id="works">
             <div class="left">
                 <div class="section_element section_element_1">
                     <p>(01)</p>
-                    <p>EMERGENCE</p>
+                    <p id="target_elem_1">EMERGENCE</p>
                     <img src="assets/icons/stars.png" alt="">
                 </div>
 
                 <div class="section_element section_element_2">
                     <p>(02)</p>
-                    <p>Silky kiss</p>
+                    <p id="target_elem_2">Silky kiss</p>
                     <img src="assets/icons/stars.png" alt="">
                 </div>
 
                 <div class="section_element section_element_3">
                     <p>(03)</p>
-                    <p>Softly Brutal</p>
+                    <p id="target_elem_3">Softly Brutal</p>
                     <img src="assets/icons/stars.png" alt="">
                 </div>
 
                 <div class="section_element section_element_4">
                     <p>(04)</p>
-                    <p>noise</p>
+                    <p id="target_elem_4">noise</p>
                     <img src="assets/icons/stars.png" alt="">
                 </div>
 
             </div>
 
             <div class="right">
-                <img src="projects/emergence/MAIN.jpg" alt="" id="project_img">
+                <img src="projects/emergence/MAIN.jpg" alt="" class="ukiyo" id="project_img">
                 <div class="line_1">
                     <p id="project_title">EMERGENCE</p>
                     <p id="project_date">// 2022</p>
@@ -115,7 +131,7 @@
         <filter id="turbulence">
             <feTurbulence baseFrequency="1" result="turbulence" id="feTurb" type="turbulence" numOctaves="1">
             </feTurbulence>
-            <feDisplacementMap in="SourceGraphic" in2="turbulence" scale="10">
+            <feDisplacementMap in="SourceGraphic" in2="turbulence" scale="4">
             </feDisplacementMap>
         </filter>
     </svg>
