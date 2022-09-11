@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>William Touboul | Web / UI/UX / Graphic Designer</title>
+    <link rel="stylesheet" href="assets/style/main.css">
+    <link rel="icon" href="assets/icons/stars.png" type="image/png">
+
+
+</head>
+
+<body>
+    <div class="close_button"></div>
+
+    <!-- NAVBAR -->
+    <div class="navbar nav_hide">
+        <nav>
+            <a href="index.html">accueil</a>
+            <a href="portfolio.html">portfolio</a>
+            <a href="contact.html">contact</a>
+        </nav>
+
+        <div class="socials">
+            <a href="dribbble.com">Dribbble</a>
+            <img src="assets/icons/losange_separator.svg" alt="">
+            <a href="behance.com">Behance</a>
+            <img src="assets/icons/losange_separator.svg" alt="">
+            <a href="instagram.com">Instagram</a>
+        </div>
+    </div>
+
+    <main>
+
+        <div class="header">
+            <div class="top">
+                <h2>Salut, je m'appelle</h2>
+                <h1><span>WILLIAM</span></h1>
+                <p><span>UI/UX</span> Designer || <span>GRAPHIC</span> designer.</p>
+                <p><span>WEB & CREATIVE</span> dev</p>
+                <p>Basé en <span>France</span></p>
+            </div>
+            <div class="bottom">
+                <h2>bienvenue</h2>
+            </div>
+            <img class="nav_arrow" src="/assets/icons/down_arrow_header.svg" alt="">
+        </div>
+
+        <div class="part_1" id="snap_1">
+            <section class="container">
+                <p class="title">
+                    PROJETS RECENTS
+                    <img src="assets/icons/stars.png" alt="SVG carré vert">
+                    PROJETS RECENTS
+                    <img src="assets/icons/stars.png" alt="SVG carré vert">
+                    PROJETS RECENTS
+                </p>
+            </section>
+        </div>
+
+        <section class="works">
+            <div class="left">
+                <div class="section_element section_element_1">
+                    <p>(01)</p>
+                    <p>EMERGENCE</p>
+                    <img src="assets/icons/stars.png" alt="">
+                </div>
+
+                <div class="section_element section_element_2">
+                    <p>(02)</p>
+                    <p>Silky kiss</p>
+                    <img src="assets/icons/stars.png" alt="">
+                </div>
+
+                <div class="section_element section_element_3">
+                    <p>(03)</p>
+                    <p>Softly Brutal</p>
+                    <img src="assets/icons/stars.png" alt="">
+                </div>
+
+                <div class="section_element section_element_4">
+                    <p>(04)</p>
+                    <p>noise</p>
+                    <img src="assets/icons/stars.png" alt="">
+                </div>
+
+            </div>
+
+            <div class="right">
+                <img src="projects/emergence/MAIN.jpg" alt="" id="project_img">
+                <div class="line_1">
+                    <p id="project_title">EMERGENCE</p>
+                    <p id="project_date">// 2022</p>
+                </div>
+                <div class="line_2">
+                    <p id="cat_1">
+                        branding
+                    </p>
+                    <p id="cat_2">
+                        graphic design
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+
+
+
+
+
+    <svg>
+        <filter id="turbulence">
+            <feTurbulence baseFrequency="1" result="turbulence" id="feTurb" type="turbulence" numOctaves="1">
+            </feTurbulence>
+            <feDisplacementMap in="SourceGraphic" in2="turbulence" scale="10">
+            </feDisplacementMap>
+        </filter>
+    </svg>
+
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"></script>
+    <script src="assets/scripts/marquee.js"></script>
+    <script src="assets/scripts/main.js"></script>
+
+</body>
+
+</html>
