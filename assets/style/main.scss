@@ -86,7 +86,7 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    transition: all .5s ease-in-out;
+    transition: all 1.55s cubic-bezier(0.16, 1, 0.3, 1);
     z-index: 150;
 
     nav {
@@ -102,7 +102,7 @@ body {
             color: $text;
             font-family: 'satisfice';
             font-weight: 500;
-            transition: all .2s ease-out;
+            transition: all .2s cubic-bezier(0.16, 1, 0.3, 1);
             letter-spacing: 2px;
             position: relative;
 
@@ -124,7 +124,7 @@ body {
 
             &:nth-child(2) {
                 position: relative;
-                transition: all .2s ease-out;
+                transition: all .2s cubic-bezier(0.16, 1, 0.3, 1);
 
                 &::after {
                     content: '';
@@ -135,7 +135,7 @@ body {
                     position: absolute;
                     top: -40px;
                     right: -40px;
-                    transition: all .2s ease-out;
+                    transition: all .2s cubic-bezier(0.16, 1, 0.3, 1);
                 }
 
                 &:hover {
@@ -163,7 +163,7 @@ body {
             font-size: $p;
             text-decoration: none;
             margin: 24px;
-            transition: all .2s;
+            transition: all .2s cubic-bezier(0.16, 1, 0.3, 1);
 
             &:hover {
                 color: $main_clr
@@ -171,8 +171,6 @@ body {
         }
     }
 }
-
-
 
 
 .header {
@@ -307,8 +305,15 @@ body {
 
 .works {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     padding: 60px;
+    min-height: 120vh;
+    align-items: space-between;
+
+    .column {
+        display: flex;
+        flex-direction: row;
+    }
 
     .left {
         display: flex;
@@ -328,7 +333,7 @@ body {
                     font-family: 'montreal medium';
                     font-weight: 500;
                     margin-right: 24px;
-                    transition: color .2s ease-in-out;
+                    transition: color .2s cubic-bezier(0.16, 1, 0.3, 1);
 
                 }
 
@@ -339,7 +344,7 @@ body {
                     line-height: 55px;
                     color: $text;
                     z-index: 5;
-                    transition: color .2s ease-in-out;
+                    transition: color .2s cubic-bezier(0.16, 1, 0.3, 1);
                 }
 
             }
@@ -349,7 +354,9 @@ body {
                 width: 80px;
                 margin-left: -40px;
                 margin-bottom: 30px;
-                transition: transform 2s ease-in-out;
+                transition: transform 2s cubic-bezier(0.16, 1, 0.3, 1);
+
+
             }
 
             &:nth-child(even) {
@@ -382,7 +389,7 @@ body {
         img {
             background-color: grey;
             width: 33vw;
-            height: 100%;
+            height: 60%;
             object-fit: cover;
         }
 
@@ -395,7 +402,7 @@ body {
         }
 
         .line_1 {
-            width: 25vw;
+            width: 33vw;
             display: flex;
             flex-direction: row;
             justify-content: space-between;
@@ -421,12 +428,42 @@ body {
             color: $text;
         }
     }
+
+    .cta {
+        font-size: 24px;
+        font-family: 'montreal medium';
+        padding-left: 36px;
+        padding-right: 36px;
+        padding-top: 18px;
+        padding-bottom: 18px;
+        border-radius: 54px;
+        width: auto;
+        color: $text;
+        border: 1px $main_clr solid;
+        align-self: center;
+        cursor: pointer;
+        text-decoration: none;
+        transition: all 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+
+        span {
+            font-family: 'satisfice';
+            color: $main_clr;
+
+        }
+
+        &:hover {
+            color: $grey;
+            background-color: $main_clr;
+
+            span {
+                color: $text
+            }
+        }
+    }
 }
 
 
 /* --------------------------------- button --------------------------------- */
-
-
 .button_container {
     position: relative;
 }
@@ -479,5 +516,171 @@ body {
 
     .button:hover .button-text.foreground-text {
         opacity: 1;
+    }
+}
+
+.about {
+    padding: 60px;
+    display: flex;
+    flex-direction: column;
+
+    .top,
+    .bottom {
+        display: flex;
+        flex-direction: column;
+
+        h2 {
+            font-family: 'satisfice';
+            font-size: $h2;
+            color: $text;
+
+            span {
+                color: $main_clr;
+            }
+        }
+
+        p {
+            font-size: $p;
+            color: $text;
+            font-family: 'montreal medium';
+            width: 40%;
+            text-align: justify;
+        }
+    }
+
+    .bottom {
+        align-items: flex-end;
+        margin-top: 68px;
+    }
+
+
+    .cta {
+        margin-top: 64px;
+        font-size: 24px;
+        font-family: 'montreal medium';
+        padding-left: 36px;
+        padding-right: 36px;
+        padding-top: 18px;
+        padding-bottom: 18px;
+        border-radius: 54px;
+        width: auto;
+        color: $text;
+        border: 1px $main_clr solid;
+        align-self: center;
+        cursor: pointer;
+        text-decoration: none;
+        transition: all 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+
+        span {
+            font-family: 'satisfice';
+            color: $main_clr;
+
+        }
+
+        &:hover {
+            color: $grey;
+            background-color: $main_clr;
+
+            span {
+                color: $text
+            }
+        }
+    }
+}
+
+.noise {
+    position: fixed;
+    top: -50%;
+    left: -50%;
+    right: -50%;
+    bottom: -50%;
+    width: 200%;
+    background: transparent url('http://assets.iceable.com/img/noise-transparent.png') repeat 0 0;
+    background-repeat: repeat;
+    animation: bg-animation .6s infinite;
+    opacity: .9;
+    visibility: visible;
+    pointer-events: none;
+    user-select: none;
+}
+
+@keyframes bg-animation {
+    0% {
+        transform: translate(0, 0)
+    }
+
+    10% {
+        transform: translate(-5%, -5%)
+    }
+
+    20% {
+        transform: translate(-10%, 5%)
+    }
+
+    30% {
+        transform: translate(5%, -10%)
+    }
+
+    40% {
+        transform: translate(-5%, 15%)
+    }
+
+    50% {
+        transform: translate(-10%, 5%)
+    }
+
+    60% {
+        transform: translate(15%, 0)
+    }
+
+    70% {
+        transform: translate(0, 10%)
+    }
+
+    80% {
+        transform: translate(-15%, 0)
+    }
+
+    90% {
+        transform: translate(10%, 5%)
+    }
+
+    100% {
+        transform: translate(5%, 0)
+    }
+}
+
+#svg_turb {
+    position: absolute;
+    top: -100%;
+}
+
+.footer_section {
+    padding-left: 60px;
+    padding-right: 60px;
+
+    footer {
+        width: 100%;
+        border-top: 1px $text solid;
+        padding-left: 60px;
+        padding-right: 60px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        min-height: 120px;
+
+        a {
+            margin: 24px;
+            font-family: 'satisfice';
+            color: white;
+            letter-spacing: 2px;
+            font-size: 36px;
+            text-decoration: none;
+
+            &:hover {
+                color: $main_clr
+            }
+        }
     }
 }
